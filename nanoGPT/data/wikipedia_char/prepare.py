@@ -8,6 +8,21 @@ import os
 import pickle
 import requests
 import numpy as np
+import re
+
+n = 100000
+
+valid_lines = []
+with open("./../../wikipedia_dataset.txt", "r", encoding="utf-8") as f:
+    data = f.read()
+    data = data[:n]
+    valid_lines = re.split(r'[\n]', data)
+
+with open("./input.txt", "w", encoding="utf-8") as f:
+    for valid_line in valid_lines:
+        if valid_line != "":
+            f.write(valid_line)
+            f.write("\n")
 
 # download the tiny shakespeare dataset
 input_file_path = os.path.join(os.path.dirname(__file__), 'input.txt')

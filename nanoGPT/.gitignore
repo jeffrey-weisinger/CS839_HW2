@@ -8,5 +8,6 @@ __pycache__/
 *.pt
 *.pyc
 input.txt
+wikipedia_dataset.txt
 env/
 venv/
