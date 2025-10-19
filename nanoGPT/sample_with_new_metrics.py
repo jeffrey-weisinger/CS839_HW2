@@ -92,9 +92,10 @@ with torch.no_grad():
                 f.write(decode(y[0].tolist()))
                 f.write('\n')
 k = 5
+train_data = "shakespeare_char"
 training_lines = []
 #getting all individual input lines in a list.
-with open("./data/wikipedia/input.txt", "r", encoding="utf-8", errors="ignore") as f:
+with open(f"./data/{train_data}/input.txt", "r", encoding="utf-8", errors="ignore") as f:
     training_data = f.read()
     training_data_arr = training_data.split("\n")
     for line in training_data_arr:
