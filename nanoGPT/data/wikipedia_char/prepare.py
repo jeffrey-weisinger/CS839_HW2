@@ -18,7 +18,7 @@ with open("./input.txt", "w", encoding="utf-8") as f:
             f.write(valid_line)
             f.write("\n")
 
-with open('./../../wikipedia_dataset', 'r') as f:
+with open("./../../wikipedia_dataset.txt", 'r') as f:
     data = f.read()
 print(f"length of dataset in characters: {len(data):,}")
 
