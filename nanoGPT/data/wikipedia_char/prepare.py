@@ -4,7 +4,7 @@ import requests
 import numpy as np
 import re
 
-n = 100000
+n = 5100000
 
 valid_lines = []
 with open("./../../wikipedia_dataset.txt", "r", encoding="utf-8") as f:
@@ -12,13 +12,13 @@ with open("./../../wikipedia_dataset.txt", "r", encoding="utf-8") as f:
     data = data[:n]
     valid_lines = re.split(r'[\n]', data)
 
-with open("./input.txt", "w", encoding="utf-8") as f:
+with open("./../../wikipedia_prepared_dataset.txt", "w", encoding="utf-8") as f:
     for valid_line in valid_lines:
         if valid_line != "":
             f.write(valid_line)
             f.write("\n")
 
-with open("./../../wikipedia_dataset.txt", 'r') as f:
+with open("./../../wikipedia_prepared_dataset.txt", 'r', encoding="utf-8") as f:
     data = f.read()
 print(f"length of dataset in characters: {len(data):,}")
 

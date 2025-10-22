@@ -2,7 +2,7 @@ from openai import OpenAI
 import random
 
 API_KEY = "" 
-with open("../../api_key.txt") as f:
+with open("../api_key.txt") as f:
     API_KEY = f.read()
 
 client = OpenAI(api_key = API_KEY)
