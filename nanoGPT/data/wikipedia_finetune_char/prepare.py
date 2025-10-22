@@ -4,7 +4,7 @@ import requests
 import numpy as np
 import re
 
-n = 45100000
+n = 100000
 
 valid_lines = []
 with open("./../../wikipedia_dataset.txt", "r", encoding="utf-8") as f:
